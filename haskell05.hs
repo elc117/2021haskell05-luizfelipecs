@@ -4,10 +4,8 @@
 bmi :: Float -> Float -> String
 bmi peso altura = 
   let imc = peso / altura^2 
-  in 
-    | imc <= 18.5 = "ABAIXO" 
-    | imc < 30.0 = "NORMAL" 
-    | otherwise = "ACIMA"
+  in if imc <= 18.5 then "ABAIXO" else
+     if imc < 30.0 then "NORMAL" else "ACIMA" 
 
 
 bmi' :: Float -> Float -> String
